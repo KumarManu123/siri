@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block body_block %}
+<h1>{{company.name}} Information</h1>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<ul>
+    <h2><li>Company Name:{{company.name}}</li></h2>
+    <h2><li>Company Location:{{company.location}}</li></h2>
+    <h2><li>Company CEO:{{company.ceo}}</li></h2>
+    <a class="btn btn-warning" href="/update/{{company.id}}">UpdateRecord</a>
+    <a class="btn btn-success" href="/">CompaniesList</a>
+    <a class="btn btn-warning" href="/delete/{{company.id}}">DeleteRecord</a>
+</ul>
+{% endblock %}
